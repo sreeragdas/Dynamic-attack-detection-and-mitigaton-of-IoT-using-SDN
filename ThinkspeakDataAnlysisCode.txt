@@ -1,0 +1,11 @@
+readChId = 1238346           % Your Channel ID					
+readKey = 'OGWKFQW2QVC8LZN5' %Your Read API Key
+[timeStamps] = thingSpeakRead(readChId,'fields',[1,2],...
+    'NumPoints',100,'ReadKey',readKey);
+
+plot(timeStamps);
+xlabel('TimeStamps');
+ylabel('Measured Values');
+title('Analysis');
+legend({'Temperature','Humidity'});
+grid on;
